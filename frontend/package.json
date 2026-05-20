@@ -9,11 +9,11 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.106.1",
+    "lucide-react": "^0.294.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.0",
-    "@supabase/supabase-js": "^2.38.4",
-    "lucide-react": "^0.294.0"
+    "react-router-dom": "^6.20.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
