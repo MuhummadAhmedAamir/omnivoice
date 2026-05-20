@@ -11,7 +11,7 @@ By leveraging a highly decoupled **Layered Architecture**, a persistent bidirect
 * **Frontend:** React (SPA Architecture), TailwindCSS, Native Browser MediaStream Recording API.
 * **Backend:** FastAPI (Python), WebSockets, Asyncio, Supabase-py.
 * **Database:** Supabase (PostgreSQL Cloud Instance).
-* **AI Inference Engine (Local CPU):** `llama-cpp-python` (with 4-bit quantization) & `faster-whisper`.
+* **AI Inference Engine .
 * **AI Synthesis Engine (Cloud Neural Streams):** `edge-tts`.
 
 ---
@@ -41,7 +41,7 @@ To avoid system lockups or memory thrashing on 8GB RAM hardware, OmniVoice separ
 +-------------------------------+ +-------------------------------+ +-------------------------------+
 |       EARS LAYER (STT)        | |       BRAIN LAYER (LLM)       | |       VOICE LAYER (TTS)       |
 +-------------------------------+ +-------------------------------+ +-------------------------------+
-| Faster-Whisper (tiny.en)      | | Llama-3.2-1B (GGUF Q4_K_M)    | | Edge-TTS                      |
+| Faster-Whisper (tiny.en)      | |   | | Edge-TTS                      |
 | * Local CPU Execution (int8)  | | * JSON Intent & Entity Parser | | * en-IN-PrabhatNeural (Fast)  |
 +-------------------------------+ +-------------------------------+ +-------------------------------+
                                                  |
@@ -60,7 +60,7 @@ OmniVoice uses **Faster-Whisper** initialized with the **`tiny.en`** model weigh
 
 ### 2. Brain Layer (Large Language Model)
 
-The system leverages **Llama-3.2-1B-Instruct** packed inside a 4-bit **`Q4_K_M GGUF`** container file. This tiny 700MB model executes logical reasoning operations in milliseconds on a standard Core i7 processor.
+The system leverages * container file. This tiny 700MB model executes logical reasoning operations in milliseconds on a standard Core i7 processor.
 
 * **The Intent Parser:** Rather than outputting conversational prose, Llama is strictly system-prompted to yield a dual-layered structured object combining a hidden execution **JSON structure** and a customer-facing **Spoken Text** wrapper.
 
