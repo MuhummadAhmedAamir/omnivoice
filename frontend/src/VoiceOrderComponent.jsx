@@ -2,8 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Mic, PhoneCall, LogIn, UserPlus, LogOut, ClipboardList, ShieldAlert, CheckCircle, RefreshCw, Radio, ShoppingBag } from 'lucide-react';
 import { supabase } from './supabaseclient.js'; 
 
-const BACKEND_URL = "https://embassy-specimen-jersey.ngrok-free.dev";
-
+//const BACKEND_URL = "https://embassy-specimen-jersey.ngrok-free.dev";
+const BACKEND_URL = "https://ahmednadeem18-omnivoice-backend.hf.space";
 export default function VoiceOrderComponent() {
   const [view, setView] = useState('landing'); 
   const [authMode, setAuthMode] = useState('login'); 
@@ -285,7 +285,7 @@ export default function VoiceOrderComponent() {
             <div style={{ ...styles.menuGrid, gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fill, minmax(280px, 1fr))' }}>
               {menuItems.length === 0 ? <p style={{color:'#8A99AD', gridColumn:'1/-1', textAlign:'center'}}>Connecting to Supabase menu records index...</p> : menuItems.map(item => (
                 <div key={item.id} style={styles.menuCard}>
-                  <div style={styles.cardTag}>Rs. {item.price}</div>
+                  <div style={styles.cardTag}>$ {item.price}</div>
                   <h3 style={{paddingRight: '4.5rem'}}>{item.name}</h3>
                   <span style={styles.categoryLabel}>{item.category || "Main Course"}</span>
                   <p style={styles.cardDesc}>{item.description || "Fresh option available for fast delivery."}</p>
